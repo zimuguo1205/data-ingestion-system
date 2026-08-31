@@ -1,0 +1,111 @@
+{
+  "tested_at_utc": "2026-08-31T21:15:57Z",
+  "privacy_note": "Review text and user/profile identifiers are intentionally omitted.",
+  "tests": {
+    "steam": {
+      "evidence_type": "sample_pull",
+      "http_status": [200, 200],
+      "records_per_page": [5, 5],
+      "stable_id_overlap": 0,
+      "cursor_present": true,
+      "reported_total_reviews": 2605378,
+      "first_page_created_utc_min": "2026-08-31T19:17:01Z",
+      "first_page_created_utc_max": "2026-08-31T19:23:24Z",
+      "fields": [
+        "app_release_date",
+        "author",
+        "comment_count",
+        "language",
+        "primarily_steam_deck",
+        "reactions",
+        "received_for_free",
+        "recommendationid",
+        "refunded",
+        "review",
+        "steam_purchase",
+        "timestamp_created",
+        "timestamp_updated",
+        "voted_up",
+        "votes_funny",
+        "votes_up",
+        "weighted_vote_score",
+        "written_during_early_access"
+      ]
+    },
+    "apple_app_store_rss": {
+      "evidence_type": "sample_pull",
+      "pages": {
+        "1": {"http_status": 200, "records": 50},
+        "2": {"http_status": 200, "records": 50},
+        "10": {"http_status": 200, "records": 50},
+        "11": {"http_status": 400}
+      },
+      "page_1_2_stable_id_overlap": 0,
+      "observed_timestamp_window": {
+        "oldest": "2026-08-25T09:32:00-07:00",
+        "newest": "2026-08-30T08:39:23-07:00"
+      },
+      "fields": [
+        "author",
+        "content",
+        "id",
+        "im:contentType",
+        "im:rating",
+        "im:version",
+        "im:voteCount",
+        "im:voteSum",
+        "link",
+        "title",
+        "updated"
+      ]
+    },
+    "mozilla_addons": {
+      "evidence_type": "sample_pull",
+      "http_status": [200, 200],
+      "records_per_page": [5, 5],
+      "stable_id_overlap": 0,
+      "reported_matching_reviews": 5829,
+      "fields": [
+        "addon",
+        "body",
+        "created",
+        "id",
+        "is_deleted",
+        "is_developer_reply",
+        "is_latest",
+        "previous_count",
+        "reply",
+        "score",
+        "user",
+        "version"
+      ]
+    },
+    "github_issues": {
+      "evidence_type": "sample_pull",
+      "http_status": [200, 200],
+      "returned_objects_per_page": [5, 5],
+      "actual_issues_after_pull_request_filter": [1, 3],
+      "issue_id_overlap": 0,
+      "pagination_link_header_present": true,
+      "unauthenticated_rate_remaining": [59, 58]
+    },
+    "hacker_news": {
+      "evidence_type": "sample_pull",
+      "http_status": [200, 200],
+      "maxitem": 49514931,
+      "changed_item_ids": 72,
+      "changed_profile_ids": 29,
+      "latest_five_item_type": "comment"
+    },
+    "access_status_checks": {
+      "evidence_type": "raw_http_check",
+      "amazon_reviews": 200,
+      "trustpilot_public_page": 403,
+      "trustpilot_api_without_key": 403,
+      "yelp_public_page": 403,
+      "yelp_api_without_authorization": 400,
+      "google_play_public_page": 200,
+      "boardgamegeek_api_without_token": 401
+    }
+  }
+}
