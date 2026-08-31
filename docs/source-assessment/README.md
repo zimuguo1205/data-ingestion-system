@@ -1,3 +1,4 @@
+
 # Live Review Source Assessment
 
 Assessment date: 2026-08-31  
@@ -54,9 +55,9 @@ The recommendation is based on observed repeatability and field coverage, not ju
 
 The screenshots show only publicly visible page state. They do not prove that automated extraction is permitted or stable.
 
-- [`evidence/screenshots/amazon-review-page-access.jpg`](evidence/screenshots/amazon-review-page-access.jpg): Amazon “Most recent” customer-review page loaded; session-identifying header was cropped out.
-- [`evidence/screenshots/trustpilot-public-page.jpg`](evidence/screenshots/trustpilot-public-page.jpg): Trustpilot public business-review page loaded in a browser, while the raw HTTP and no-key API checks returned 403.
-- [`evidence/screenshots/yelp-review-page.jpg`](evidence/screenshots/yelp-review-page.jpg): Yelp business page showed rating and review volume in a browser, while a raw client request returned 403.
+- [`evidence/screenshots/amazon-review-page-access.svg`](evidence/screenshots/amazon-review-page-access.svg): Amazon “Most recent” customer-review page loaded; session-identifying header was cropped out.
+- [`evidence/screenshots/trustpilot-public-page.svg`](evidence/screenshots/trustpilot-public-page.svg): Trustpilot public business-review page loaded in a browser, while the raw HTTP and no-key API checks returned 403.
+- [`evidence/screenshots/yelp-review-page.svg`](evidence/screenshots/yelp-review-page.svg): Yelp business page showed rating and review volume in a browser, while a raw client request returned 403.
 
 ## What this assessment does not claim
 
