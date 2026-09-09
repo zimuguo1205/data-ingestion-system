@@ -1,6 +1,6 @@
 # Documentation References
 
-Links were checked on 2026-08-31. “Official” means published by the platform or API owner; it does not imply that every public webpage is licensed for automated extraction.
+Links were checked on 2026-08-31 and rechecked for the recommendation update on 2026-09-09. “Official” means published by the platform or API owner; it does not imply that every public webpage is licensed for automated extraction.
 
 ## Steam
 
@@ -9,7 +9,8 @@ Links were checked on 2026-08-31. “Official” means published by the platform
 ## Apple
 
 - [Observed App Store customer-review RSS endpoint](https://itunes.apple.com/us/rss/customerreviews/page=1/id=389801252/sortby=mostrecent/json) — direct sample source used in this assessment.
-- [Apple: List all customer reviews for an app](https://developer.apple.com/documentation/appstoreconnectapi/get-v1-apps-_id_-customerreviews) — official App Store Connect API for an app available to the authenticated developer account; it is not evidence of arbitrary cross-app access.
+- [Apple: Customer Reviews](https://developer.apple.com/documentation/appstoreconnectapi/customer-reviews) — the official App Store Connect review resource is for an authenticated developer's app and is not evidence of arbitrary cross-app access.
+- [Apple: App Store Connect API overview](https://developer.apple.com/documentation/appstoreconnectapi/) — calls require JWT authorization created from an organization's App Store Connect account.
 
 The public RSS endpoint worked in the sample, but a clear current Apple specification for this legacy public surface was not identified. This is why the report assigns it higher maintenance risk than Steam.
 
