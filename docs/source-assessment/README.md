@@ -1,4 +1,3 @@
-
 # Live Review Source Assessment
 
 Assessment date: 2026-08-31  
@@ -6,11 +5,11 @@ Scope: organize the previously reviewed sources; no new sources were added.
 
 ## Executive conclusion
 
-**Recommended Phase I pilot: Steam Reviews API.** It is the strongest immediately usable source because a live, unauthenticated sample pull succeeded; cursor pagination produced distinct pages; each review has stable IDs, creation/update timestamps, text, and an explicit positive/negative label; and the collection method is documented by Steam.
+**Updated recommendation (2026-09-09): do not select Steam as the primary analytical source.** Steam remains the strongest demonstrated technical baseline, but its gaming-only population and vocabulary are a material limitation for broad downstream sentiment analysis. The decision rationale and validation gate are summarized below.
 
 **Recommended secondary adapter: Apple App Store customer-review RSS.** It broadens the domain beyond games and has ratings, text, app version, IDs, and timestamps. The observed public feed is easy to ingest but only exposed a rolling 500-review window in this test, and it is less clearly documented than Steam. It should therefore be treated as a useful second source, not the sole long-history source.
 
-**Conditional broader source: Trustpilot official API.** Its documented schema and pagination are attractive for business/service reviews, but the API requires a key and was not sample-tested with credentials. A public webpage being visible in a browser is not evidence that automated collection is supported. Do not select it until access and permitted use are confirmed and a credentialed sample pull succeeds.
+**Preferred broader candidate: Trustpilot official API, subject to validation.** Its documented schema and pagination offer the best potential balance of analytical breadth and repeatable ingestion among the existing candidates, but the API requires a key and was not sample-tested with credentials. A public webpage being visible in a browser is not evidence that automated collection is supported. Do not select it until access and permitted use are confirmed and a credentialed sample pull succeeds.
 
 Amazon Reviews '23 remains useful as a static schema, load-test, and modeling fixture, but it does **not** meet the repeatable live-ingestion requirement.
 
@@ -43,13 +42,13 @@ The machine-readable summary is in [`evidence/sample-pull-summary.json`](evidenc
 
 ## Recommendation and proposed decision gate
 
-1. Approve **Steam Reviews API** for the first automated ingestion module.
-2. Implement incremental collection using the review ID plus both `timestamp_created` and `timestamp_updated`; persist the returned cursor only as a run checkpoint, not as the sole identity.
-3. Store only the review and product/context fields needed for the project. Do not retain unnecessary profile identifiers from the nested author object.
-4. Add a small **Apple App Store RSS** adapter after the Steam path works, so downstream sentiment analysis is not evaluated only on gaming language.
-5. If a broader business/service source is important, request a Trustpilot API key and permission clarification, then rerun the same two-page sample test before revisiting the shortlist.
+1. Treat **Steam Reviews API** as the technical baseline, not the primary analytical corpus.
+2. Request Trustpilot API access and confirm permitted use for the intended review collection.
+3. Run a credentialed two-page Trustpilot test: compare stable IDs, capture the pagination token, record timestamp coverage and fields, and test a deliberately varied set of business/service profiles.
+4. Select Trustpilot as the primary source only if that validation passes. If it does not, document the result and choose an explicitly constrained fallback; do not infer permission from public webpage visibility.
+5. Preserve the same minimization principle for all sources: retain only review and product/context fields needed for the project, and avoid unnecessary profile identifiers.
 
-The recommendation is based on observed repeatability and field coverage, not just subject-matter fit. Steam's main weakness is representativeness: the gaming-specific population, vocabulary, review-bombing behavior, and binary recommendation label may not generalize to ordinary retail or service feedback. That bias should be tracked in downstream analysis.
+The revised recommendation weighs observed repeatability alongside subject-matter fit. Steam's gaming-specific population, vocabulary, review-bombing behavior, and binary recommendation label may not generalize to ordinary retail or service feedback. Trustpilot has stronger potential breadth, but its actual feasibility remains unproven until permitted credentialed access is tested.
 
 ## Screenshots
 
