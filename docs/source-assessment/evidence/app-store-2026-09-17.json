@@ -1,0 +1,379 @@
+{
+  "started_at_utc": "2026-09-18T05:22:44.062063+00:00",
+  "user_agent": "DataIngestionSourceAssessment/0.1 (+https://github.com/zimuguo1205/data-ingestion-system)",
+  "robots": [
+    {
+      "url": "https://play.google.com/robots.txt",
+      "requested_at_utc": "2026-09-18T05:22:44.062336+00:00",
+      "status": 200,
+      "final_url": "https://play.google.com/robots.txt",
+      "content_type": "text/plain; charset=utf-8",
+      "server_date": "Fri, 18 Sep 2026 05:22:44 GMT",
+      "bytes": 3199,
+      "body_sha256": "cad8995e4d35174309d6d04c1f6765afeb7643e88cf2155af27cbdabb92ef552",
+      "truncated": false,
+      "rules": "User-Agent: *\nAllow: /store/devices\nAllow: /about\nAllow: /apps/publish\nAllow: /artists\nAllow: /books\nAllow: /books/publish\nDisallow: /books/*\nDisallow: /googlebooks/images\nDisallow: /music\nDisallow: /music/*\nDisallow: /store/purchase\nDisallow: /store/apps/datasafety*\nDisallow: /store/apps/editorial?*id=mc_apps_us_sponsored_feature_pilot_turbotax_fcp_option_a*\nDisallow: /store/apps/editorial?*id=mc_games_battlestar*\nDisallow: /store/apps/editorial?*id=mc__games_battlestar*\nDisallow: /store/apps/editorial?*id=mc_battlestar*\nDisallow: /work/acceptinvitation\nDisallow: /work/adminsettings\nDisallow: /work/adminsignup\nDisallow: /work/approveitem\nDisallow: /work/licenses/apps\nDisallow: /work/xhr/inviteadmin\nDisallow: /work/permissionsupdate\nDisallow: /work/xhr/removeadmin\nDisallow: /work/signin\nDisallow: /work/unapproveitem\nDisallow: /apps\nDisallow: /library/devices\nDisallow: /newsstand\nDisallow: /movies\nDisallow: /store/xhr\nDisallow: /wishlist\nDisallow: /store/people/details\nDisallow: /store/account\nDisallow: /store/addtocart\nDisallow: /_\nDisallow: /store/cancelpreorder\nDisallow: /store/cart\nDisallow: /store/checkoutcallback\nDisallow: /ct\nDisallow: /unsub\nDisallow: /store/xhr/getdevicepermissions\nDisallow: /store/getdevicepermissions\nDisallow: /store/getreviews\nDisallow: /store/xhr/install\nDisallow: /internalPref\nDisallow: /logout\nDisallow: /lsoinstall\nDisallow: /store/movie-device\nDisallow: /store/myaccount\nDisallow: /store/mylibrary\nDisallow: /plusinstall\nDisallow: /store/ratereview\nDisallow: /store/recommended\nDisallow: /remotelogout\nDisallow: /store/search\nDisallow: /store/setuserdata\nDisallow: /store/submitreview\nDisallow: /store/updatecart\nDisallow: /settings\nDisallow: /store/watch\nDisallow: /xhr\nDisallow: /work/account\nDisallow: /work/addtocart\nDisallow: /work/_\nDisallow: /work/cancelpreorder\nDisallow: /work/cart\nDisallow: /work/checkoutcallback\nDisallow: /work/ct\nDisallow: /work/unsub\nDisallow: /work/xhr/getdevicepermissions\nDisallow: /work/getdevicepermissions\nDisallow: /work/getreviews\nDisallow: /work/xhr/install\nDisallow: /work/internalPref\nDisallow: /work/logout\nDisallow: /work/lsoinstall\nDisallow: /work/movie-device\nDisallow: /work/myaccount\nDisallow: /work/mylibrary\nDisallow: /work/plusinstall\nDisallow: /work/ratereview\nDisallow: /work/recommended\nDisallow: /work/remotelogout\nDisallow: /work/search\nDisallow: /work/setuserdata\nDisallow: /work/submitreview\nDisallow: /work/updatecart\nDisallow: /work/settings\nDisallow: /work/watch\nDisallow: /work/xhr\nDisallow: /store/multi/collection/p3_details_*\nDisallow: /store/books/collection/p3_details_*\nDisallow: /store/music/collection/p3_details_*\nDisallow: /store/apps/collection/p3_details_*\nDisallow: /store/movies/collection/p3_details_*\nDisallow: /store/devices/collection/p3_details_*\nDisallow: /store/newsstand/collection/p3_details_*\nDisallow: /store/people/collection/p3_details_*\nDisallow: /store/null/collection/p3_details_*\nDisallow: /store/info/collection/p3_details_*\nDisallow: /store/chrome/collection/p3_details_*\nDisallow: /store/giftcards/collection/p3_details_*\n\nSitemap: https://play.google.com/sitemaps/sitemaps-index-0.xml\nSitemap: https://play.google.com/sitemaps/sitemaps-index-1.xml\n"
+    },
+    {
+      "url": "https://itunes.apple.com/robots.txt",
+      "requested_at_utc": "2026-09-18T05:22:45.155171+00:00",
+      "status": 200,
+      "final_url": "https://itunes.apple.com/robots.txt",
+      "content_type": "text/plain; charset=utf-8",
+      "server_date": "Fri, 18 Sep 2026 05:22:45 GMT",
+      "bytes": 447,
+      "body_sha256": "ba1a38fb1c1a6f0aca23275aa99f00556060edf060f1ed52a6694bd82b91a663",
+      "truncated": false,
+      "rules": "User-agent: *\nDisallow: /WebObjects/MZFastFinance.woa\nDisallow: /WebObjects/MZFinance.woa\nDisallow: /WebObjects/MZPersonalizer.woa\nDisallow: /WebObjects/MZStoreElements.woa\nDisallow: /station/idst.\nDisallow: /WebObjects/*\nAllow: /WebObjects/MZStore.woa/wa/viewMultiRoom?*\nDisallow: /search*\nDisallow: /*/rss/*\nDisallow: /*/lookup?\n\nUser-agent: Googlebot      \nDisallow: /*/album/*/*?i=*\nDisallow: /*/tv-season/*/*?i=*\nDisallow: /*/podcast/*/*?i=*\n"
+    },
+    {
+      "url": "https://apps.apple.com/robots.txt",
+      "requested_at_utc": "2026-09-18T05:22:46.221110+00:00",
+      "status": 200,
+      "final_url": "https://apps.apple.com/robots.txt",
+      "content_type": "text/plain",
+      "server_date": "Fri, 18 Sep 2026 05:22:46 GMT",
+      "bytes": 506,
+      "body_sha256": "c21b0e8b8f4defbaa32015dbcbf74eae73f6528b211c524f18e34bc75863a2c5",
+      "truncated": false,
+      "rules": "User-agent: *\nDisallow: /WebObjects/*\nDisallow: /api/*\nDisallow: /includes/*\nDisallow: /v1/*\nDisallow: */search?*\n\nSitemap: https://apps.apple.com/sitemaps_apps_index_chart_1.xml\nSitemap: https://apps.apple.com/sitemaps_apps_index_app_1.xml\nSitemap: https://apps.apple.com/sitemaps_apps_index_new-app_1.xml\nSitemap: https://apps.apple.com/sitemaps_apps_index_story_1.xml\nSitemap: https://apps.apple.com/sitemaps_apps_index_grouping_1.xml\nSitemap: https://apps.apple.com/sitemaps_apps_index_static-url_1.xml"
+    }
+  ],
+  "pages": [
+    {
+      "url": "https://play.google.com/store/apps/details?id=com.duolingo&hl=en&gl=us",
+      "requested_at_utc": "2026-09-18T05:22:47.269818+00:00",
+      "status": 200,
+      "final_url": "https://play.google.com/store/apps/details?id=com.duolingo&hl=en&gl=us",
+      "content_type": "text/html; charset=utf-8",
+      "server_date": "Fri, 18 Sep 2026 05:22:47 GMT",
+      "bytes": 1347069,
+      "body_sha256": "6dcab430903fce2b56d475b9bc02cdce37049ce42bcafa33c61012844ad1cdb0",
+      "truncated": false,
+      "app": "Duolingo",
+      "category_selected": "Education",
+      "store": "Google Play",
+      "parsed": {
+        "jsonld_parse_errors": 0,
+        "app_metadata": [
+          {
+            "name": "Duolingo: Language Lessons",
+            "applicationCategory": "EDUCATION",
+            "aggregateRating": {
+              "@type": "AggregateRating",
+              "ratingValue": "4.731176853179932",
+              "ratingCount": "49113097"
+            }
+          }
+        ],
+        "review_count_in_jsonld": 0,
+        "reviews": [],
+        "rating_distribution": {},
+        "note": "Counts cover JSON-LD only; do not imply all page or store reviews."
+      }
+    },
+    {
+      "url": "https://apps.apple.com/us/app/duolingo-language-lessons/id570060128",
+      "requested_at_utc": "2026-09-18T05:22:48.502096+00:00",
+      "status": 200,
+      "final_url": "https://apps.apple.com/us/app/duolingo-language-lessons/id570060128",
+      "content_type": "text/html",
+      "server_date": "Fri, 18 Sep 2026 05:22:48 GMT",
+      "bytes": 1075139,
+      "body_sha256": "830f5e9b405c699cf5b7f9fe90810ea82f5537d8e04927c8a0b638466334b1ca",
+      "truncated": false,
+      "app": "Duolingo",
+      "category_selected": "Education",
+      "store": "Apple App Store",
+      "parsed": {
+        "jsonld_parse_errors": 0,
+        "app_metadata": [
+          {
+            "name": "Duolingo: Language Lessons",
+            "applicationCategory": "EducationalApplication",
+            "aggregateRating": {
+              "@type": "AggregateRating",
+              "ratingValue": 4.7,
+              "reviewCount": 5453088,
+              "bestRating": "5",
+              "worstRating": "1"
+            }
+          }
+        ],
+        "review_count_in_jsonld": 0,
+        "reviews": [],
+        "rating_distribution": {},
+        "note": "Counts cover JSON-LD only; do not imply all page or store reviews."
+      }
+    },
+    {
+      "url": "https://play.google.com/store/apps/details?id=com.todoist&hl=en&gl=us",
+      "requested_at_utc": "2026-09-18T05:22:50.048649+00:00",
+      "status": 200,
+      "final_url": "https://play.google.com/store/apps/details?id=com.todoist&hl=en&gl=us",
+      "content_type": "text/html; charset=utf-8",
+      "server_date": "Fri, 18 Sep 2026 05:22:50 GMT",
+      "bytes": 1322444,
+      "body_sha256": "975a2cbd2a091ccbd276b8fc461762f21cb2b7f7276e0073b4a5d6d976c30679",
+      "truncated": false,
+      "app": "Todoist",
+      "category_selected": "Productivity",
+      "store": "Google Play",
+      "parsed": {
+        "jsonld_parse_errors": 0,
+        "app_metadata": [
+          {
+            "name": "Todoist: To Do List & Calendar",
+            "applicationCategory": "PRODUCTIVITY",
+            "aggregateRating": {
+              "@type": "AggregateRating",
+              "ratingValue": "4.6001386642456055",
+              "ratingCount": "304765"
+            }
+          }
+        ],
+        "review_count_in_jsonld": 0,
+        "reviews": [],
+        "rating_distribution": {},
+        "note": "Counts cover JSON-LD only; do not imply all page or store reviews."
+      }
+    },
+    {
+      "url": "https://apps.apple.com/us/app/todoist-to-do-list-calendar/id572688855",
+      "requested_at_utc": "2026-09-18T05:22:51.261044+00:00",
+      "status": 200,
+      "final_url": "https://apps.apple.com/us/app/todoist-to-do-list-calendar/id572688855",
+      "content_type": "text/html",
+      "server_date": "Fri, 18 Sep 2026 05:22:52 GMT",
+      "bytes": 934460,
+      "body_sha256": "fc72cc188b8487023797dd38a958f0687c4ee66530af57991ba05f228db30198",
+      "truncated": false,
+      "app": "Todoist",
+      "category_selected": "Productivity",
+      "store": "Apple App Store",
+      "parsed": {
+        "jsonld_parse_errors": 0,
+        "app_metadata": [
+          {
+            "name": "Todoist: To Do List & Calendar",
+            "applicationCategory": "BusinessApplication",
+            "aggregateRating": {
+              "@type": "AggregateRating",
+              "ratingValue": 4.8,
+              "reviewCount": 128981,
+              "bestRating": "5",
+              "worstRating": "1"
+            }
+          }
+        ],
+        "review_count_in_jsonld": 0,
+        "reviews": [],
+        "rating_distribution": {},
+        "note": "Counts cover JSON-LD only; do not imply all page or store reviews."
+      }
+    },
+    {
+      "url": "https://play.google.com/store/apps/details?id=com.airbnb.android&hl=en&gl=us",
+      "requested_at_utc": "2026-09-18T05:22:53.495060+00:00",
+      "status": 200,
+      "final_url": "https://play.google.com/store/apps/details?id=com.airbnb.android&hl=en&gl=us",
+      "content_type": "text/html; charset=utf-8",
+      "server_date": "Fri, 18 Sep 2026 05:22:53 GMT",
+      "bytes": 1307594,
+      "body_sha256": "ddfd4e117241f5b6fcb7a6eb55813af245b900c792edf5ea38896623297cee9f",
+      "truncated": false,
+      "app": "Airbnb",
+      "category_selected": "Travel",
+      "store": "Google Play",
+      "parsed": {
+        "jsonld_parse_errors": 0,
+        "app_metadata": [
+          {
+            "name": "Airbnb",
+            "applicationCategory": "TRAVEL_AND_LOCAL",
+            "aggregateRating": {
+              "@type": "AggregateRating",
+              "ratingValue": "4.551537036895752",
+              "ratingCount": "1964306"
+            }
+          }
+        ],
+        "review_count_in_jsonld": 0,
+        "reviews": [],
+        "rating_distribution": {},
+        "note": "Counts cover JSON-LD only; do not imply all page or store reviews."
+      }
+    },
+    {
+      "url": "https://apps.apple.com/us/app/airbnb/id401626263",
+      "requested_at_utc": "2026-09-18T05:22:54.717298+00:00",
+      "status": 200,
+      "final_url": "https://apps.apple.com/us/app/airbnb/id401626263",
+      "content_type": "text/html",
+      "server_date": "Fri, 18 Sep 2026 05:22:55 GMT",
+      "bytes": 739804,
+      "body_sha256": "d5bc2eb8fdbc1d855f9c6c6b2549835c4fb0e73ed5adf3d8d4908ff52c8d7032",
+      "truncated": false,
+      "app": "Airbnb",
+      "category_selected": "Travel",
+      "store": "Apple App Store",
+      "parsed": {
+        "jsonld_parse_errors": 0,
+        "app_metadata": [
+          {
+            "name": "Airbnb",
+            "applicationCategory": "TravelApplication",
+            "aggregateRating": {
+              "@type": "AggregateRating",
+              "ratingValue": 4.8,
+              "reviewCount": 702751,
+              "bestRating": "5",
+              "worstRating": "1"
+            }
+          }
+        ],
+        "review_count_in_jsonld": 0,
+        "reviews": [],
+        "rating_distribution": {},
+        "note": "Counts cover JSON-LD only; do not imply all page or store reviews."
+      }
+    }
+  ],
+  "api_checks": [
+    {
+      "url": "https://androidpublisher.googleapis.com/androidpublisher/v3/applications/com.duolingo/reviews?maxResults=2",
+      "requested_at_utc": "2026-09-18T05:22:56.153431+00:00",
+      "status": 401,
+      "final_url": "https://androidpublisher.googleapis.com/androidpublisher/v3/applications/com.duolingo/reviews?maxResults=2",
+      "content_type": "application/json; charset=UTF-8",
+      "server_date": "Fri, 18 Sep 2026 05:22:56 GMT",
+      "bytes": 641,
+      "body_sha256": "e7398a502ea92a084bdd63f7b4b5a1ea91aba8444efc53e9bbc0345c20acf3a5",
+      "truncated": false,
+      "label": "Google official API, no OAuth",
+      "response": {
+        "error": {
+          "code": 401,
+          "message": "Request is missing required authentication credential. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.",
+          "status": "UNAUTHENTICATED",
+          "details": [
+            {
+              "@type": "type.googleapis.com/google.rpc.ErrorInfo",
+              "reason": "CREDENTIALS_MISSING",
+              "domain": "googleapis.com",
+              "metadata": {
+                "method": "google.play.publishingapi.v3.ReviewsService.List",
+                "service": "androidpublisher.googleapis.com"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "url": "https://api.appstoreconnect.apple.com/v1/apps/570060128/customerReviews?limit=2",
+      "requested_at_utc": "2026-09-18T05:22:57.369094+00:00",
+      "status": 401,
+      "final_url": "https://api.appstoreconnect.apple.com/v1/apps/570060128/customerReviews?limit=2",
+      "content_type": "application/json",
+      "server_date": "Fri, 18 Sep 2026 05:22:57 GMT",
+      "bytes": 350,
+      "body_sha256": "da6c7d70447fd00bf8184dd648b00941bf780d1c1d5c5aa80940e141d15c0961",
+      "truncated": false,
+      "label": "Apple official API, no JWT",
+      "response": {
+        "errors": [
+          {
+            "status": "401",
+            "code": "NOT_AUTHORIZED",
+            "title": "Authentication credentials are missing or invalid.",
+            "detail": "Provide a properly configured and signed bearer token, and make sure that it has not expired. Learn more about Generating Tokens for API Requests https://developer.apple.com/go/?id=api-generating-tokens"
+          }
+        ]
+      }
+    }
+  ],
+  "repeats": [
+    {
+      "url": "https://play.google.com/store/apps/details?id=com.duolingo&hl=en&gl=us",
+      "requested_at_utc": "2026-09-18T05:22:58.561355+00:00",
+      "status": 200,
+      "final_url": "https://play.google.com/store/apps/details?id=com.duolingo&hl=en&gl=us",
+      "content_type": "text/html; charset=utf-8",
+      "server_date": "Fri, 18 Sep 2026 05:22:58 GMT",
+      "bytes": 1347063,
+      "body_sha256": "5605b29da6fbacf878dd7965e12a9166140d66b70ce6f5cd0b55c926d61e91b1",
+      "truncated": false,
+      "app": "Duolingo",
+      "store": "Google Play",
+      "parsed": {
+        "jsonld_parse_errors": 0,
+        "app_metadata": [
+          {
+            "name": "Duolingo: Language Lessons",
+            "applicationCategory": "EDUCATION",
+            "aggregateRating": {
+              "@type": "AggregateRating",
+              "ratingValue": "4.731176853179932",
+              "ratingCount": "49113097"
+            }
+          }
+        ],
+        "review_count_in_jsonld": 0,
+        "reviews": [],
+        "rating_distribution": {},
+        "note": "Counts cover JSON-LD only; do not imply all page or store reviews."
+      },
+      "body_hash_overlap": 0,
+      "new_body_hashes": 0,
+      "seconds_since_first_request": 11.291537
+    },
+    {
+      "url": "https://apps.apple.com/us/app/duolingo-language-lessons/id570060128",
+      "requested_at_utc": "2026-09-18T05:22:59.802270+00:00",
+      "status": 200,
+      "final_url": "https://apps.apple.com/us/app/duolingo-language-lessons/id570060128",
+      "content_type": "text/html",
+      "server_date": "Fri, 18 Sep 2026 05:22:59 GMT",
+      "bytes": 1075139,
+      "body_sha256": "830f5e9b405c699cf5b7f9fe90810ea82f5537d8e04927c8a0b638466334b1ca",
+      "truncated": false,
+      "app": "Duolingo",
+      "store": "Apple App Store",
+      "parsed": {
+        "jsonld_parse_errors": 0,
+        "app_metadata": [
+          {
+            "name": "Duolingo: Language Lessons",
+            "applicationCategory": "EducationalApplication",
+            "aggregateRating": {
+              "@type": "AggregateRating",
+              "ratingValue": 4.7,
+              "reviewCount": 5453088,
+              "bestRating": "5",
+              "worstRating": "1"
+            }
+          }
+        ],
+        "review_count_in_jsonld": 0,
+        "reviews": [],
+        "rating_distribution": {},
+        "note": "Counts cover JSON-LD only; do not imply all page or store reviews."
+      },
+      "body_hash_overlap": 0,
+      "new_body_hashes": 0,
+      "seconds_since_first_request": 11.300174
+    }
+  ],
+  "skipped_collection_routes": [
+    {
+      "url": "https://itunes.apple.com/us/rss/customerreviews/page=1/id=570060128/sortby=mostrecent/json",
+      "reason": "robots: Disallow /*/rss/*; prior 2026-08-31 RSS results are historical only"
+    },
+    {
+      "url": "https://play.google.com/_/PlayStoreUi/data/batchexecute",
+      "reason": "robots: Disallow /_; google-play-scraper 1.2.7 review request source uses this route"
+    }
+  ],
+  "finished_at_utc": "2026-09-18T05:23:00.945376+00:00"
+}
