@@ -1,5 +1,7 @@
 # App Store source assessment
 
+> **Follow-up, 28 September:** The [direct google-play-scraper test](google-play-package-test.md) extends and supersedes the Google Play feasibility recommendation below. It retrieved 600 distinct reviews without developer credentials through an unofficial method. The official-API access restrictions below still apply to the official API, not automatically to third-party collection. This earlier report and its observations are retained as historical evidence.
+
 Assessment: 17 September 2026, America/Los_Angeles (machine logs use 18 September UTC). Scope: Google Play and Apple App Store only. Steam remains the technical baseline; Trustpilot is not selected, following project direction.
 
 ## Decision in brief
