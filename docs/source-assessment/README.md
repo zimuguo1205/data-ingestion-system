@@ -1,11 +1,11 @@
 # Live Review Source Assessment
 
 Assessment date: 2026-08-31  
-Original scope: organize the previously reviewed sources. Latest focused update: 17 September 2026, Google Play and Apple App Store only. Older tests below are historical, not newly rerun.
+Original scope: organize the previously reviewed sources. Latest focused update: 28 September 2026, direct google-play-scraper package test only. Older tests below are historical, not newly rerun.
 
 ## Executive conclusion
 
-**Current recommendation (2026-09-17): [read the focused App Store assessment](app-store-assessment.md).** Google Play is the preferred next authorized-pilot candidate, not an approved primary feed. Both stores have broader category coverage than Steam, but neither official API is a public cross-publisher review feed. The immediate gate is access to a varied, authorized app portfolio.
+**Current recommendation (2026-09-28): [read the direct Google Play package test](google-play-package-test.md).** Google Play is the lead prototype candidate: the unofficial third-party package retrieved 600 distinct reviews across three categories, with successful pagination and a matching short-interval repeat. This establishes more than the earlier public-page sample, but not multi-day reliability, freshness or permitted production use. Official-API ownership restrictions should not be confused with this unofficial method's observed technical access.
 
 **Steam remains the technical baseline**, not the primary analytical recommendation. **Trustpilot is not selected**, following project direction on commercial and analytical fit.
 
@@ -22,7 +22,7 @@ Evidence labels used below:
 - **Raw HTTP check:** a simple non-browser client recorded only the response status.
 - **Documentation:** conclusion comes from the source's published documentation, not from a successful credentialed pull.
 
-The machine-readable summary is in [`evidence/sample-pull-summary.json`](evidence/sample-pull-summary.json), the detailed observations are in [`evidence/test-log.md`](evidence/test-log.md), and documentation links are in [`references.md`](references.md).
+The latest machine-readable results are in [`evidence/google-play-package-2026-09-28.json`](evidence/google-play-package-2026-09-28.json). Historical summaries remain in [`evidence/sample-pull-summary.json`](evidence/sample-pull-summary.json), [`evidence/test-log.md`](evidence/test-log.md), and [`references.md`](references.md).
 
 ## Historical comparison (31 August tests; current dispositions noted)
 
@@ -33,7 +33,7 @@ The machine-readable summary is in [`evidence/sample-pull-summary.json`](evidenc
 | **Mozilla Add-ons ratings API** | **Yes — sample pull** | Numbered pages; 5,829 text reviews for sampled add-on | ID, body, score, created time, version, reply flags | Public v5 endpoint worked; Mozilla warns v5 may change | **Stable-looking narrow fallback.** Good schema, limited to browser extensions. |
 | **Trustpilot** | **Conditional — docs + access checks** | Official API documents `pageToken` | ID, stars, title/text, language, created/updated/experience time, verification and company reply | Browser page was visible; raw client and no-key API returned 403; official endpoint requires an API key | **Not selected**, following project direction on commercial and analytical fit. |
 | **Yelp** | **Not suitable for full-review ingestion under tested access** | Browser UI shows large review sets; official review API advertises only excerpts | Rating/text/date are visible in UI; API schema is useful but limited | Browser page visible; raw client returned 403; official endpoint requires a qualifying plan and says it returns up to three excerpts | **Reject as primary source.** It does not provide a sustainable full-review feed under the assessed method. |
-| **Google Play** | **Official API requires authorized app access** | Token pagination; recent-week API window | Rating, text, device/app metadata, reply and lastModified in official API | New report includes nine public-page review cards; no successful credentialed pull | **Conditional next pilot**, only with a varied authorized portfolio. Not validated for arbitrary third-party apps. |
+| **Google Play** | **Unofficial package: two successful collection rounds; official API still requires authorized access** | Package: two pages of 100 per app tested; full history unknown | Sampled package: ID, text, stars, timestamp, optional version/reply; no device/OS or explicit lastModified | 600 distinct reviews across three apps; short repeat matched; robots/terms and freshness caveats apply | **Lead prototype candidate.** See latest report; not yet a validated production feed. |
 | **BoardGameGeek XML API2** | **Conditional — token required** | Docs describe paging; no-token test could not reach data | Ratings/comments plus game metadata | No-token request returned 401; application approval and Bearer token required; caching and traffic minimization requested | **Defer.** Test only after application approval and license review. |
 | **GitHub Issues API** | **Yes — sample pull** | Link-header pagination; sort by update time; timestamps support incremental pulls | ID, title/body, labels, state, reactions, comments, created/updated time | Public repositories can be read without authentication; current sample contained many pull requests and required filtering | **Useful complementary feedback stream.** Broad software feedback, but not a star-review dataset and strongly technical. |
 | **Hacker News API** | **Yes — sample pull** | `maxitem`, item IDs and `updates` support polling | ID, text, timestamp, type, parent/thread relationship | Official public API; docs currently state no rate limit | **Technically easy but not a review source.** Useful for community sentiment experiments, not the primary Phase I review feed. |
@@ -43,12 +43,12 @@ The machine-readable summary is in [`evidence/sample-pull-summary.json`](evidenc
 ## Recommendation and proposed decision gate
 
 1. Treat **Steam Reviews API** as the technical baseline, not the primary analytical corpus.
-2. Do not pursue Trustpilot as primary. Confirm available Google Play / App Store Connect app permissions and permitted analytical use.
-3. If an authorized multi-category portfolio exists, run the credentialed pagination, repeat-pull, update and history checks specified in the [focused report](app-store-assessment.md).
-4. Do not select either store as the primary feed before that gate passes. If arbitrary third-party apps are required, access remains unresolved.
+2. Do not pursue Trustpilot as primary. Treat the Google Play unofficial method and official API as distinct access paths; confirm permitted use before ongoing collection.
+3. Follow the [package test](google-play-package-test.md) with bounded multi-day checks of freshness, failures, new IDs and edits, particularly the stale-looking Duolingo window.
+4. Advance Google Play as the prototype candidate, not a proven production feed. No automatic fallback to Steam is justified by the current evidence.
 5. Preserve the same minimization principle for all sources: retain only review and product/context fields needed for the project, and avoid unnecessary profile identifiers.
 
-The revised recommendation weighs analytical breadth, permitted access and demonstrated repeatability separately. Public app pages support a breadth hypothesis; they do not demonstrate a sustainable, complete review feed.
+The revised recommendation weighs analytical breadth, permitted access and demonstrated repeatability separately. The package test now demonstrates paginated short-interval repeatability, but not a complete or continuously fresh feed.
 
 ## Screenshots
 
