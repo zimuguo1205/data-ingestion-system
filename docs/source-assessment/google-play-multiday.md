@@ -35,7 +35,7 @@ The persistent Duolingo lag remains unresolved. Neither it nor the other apps' r
 
 ## Schedule and operating bounds
 
-Baseline ran on 4 October. A bounded follow-up in the same task is scheduled daily at **16:00 America/Los_Angeles**, through 7 October. The 4 October scheduled wake will reuse today's saved result, not make another collection. The script refuses collection outside 4–7 October and refuses to overwrite/retry an existing daily result. Missing dates stay missing; no synthetic backfills.
+Baseline ran on 4 October. Starting 5 October, the bounded follow-up in the same task is scheduled daily at **15:00 America/Los_Angeles**, through 7 October, moved one hour earlier at the user's request. The first observation was collected at 15:32 on 4 October; the 4 October scheduled wake was set for 16:00 and would reuse that day's saved result. The script refuses collection outside 4–7 October and refuses to overwrite/retry an existing daily result. Missing dates stay missing; no synthetic backfills.
 
 The local computer must remain on with the desktop app running and the workspace available for the scheduled runs. This is a local scheduled task, not a deployed cloud collector. See [official scheduled-task operating conditions](https://learn.chatgpt.com/docs/automations?surface=app). The OpenAI Docs guidance informed this local-execution constraint. If scheduling or publication fails, preserve evidence and disclose the gap; do not claim four successful observation days.
 
