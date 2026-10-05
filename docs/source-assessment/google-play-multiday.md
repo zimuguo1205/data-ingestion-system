@@ -33,6 +33,25 @@ Collected 22:32–22:33 UTC (15:32–15:33 PDT): **2,000 distinct app/review IDs
 
 The persistent Duolingo lag remains unresolved. Neither it nor the other apps' returned newest times should be assumed to reflect every review currently visible elsewhere on Google Play.
 
+## Second observation: 5 October
+
+Collected **16:07:54–16:08:41 UTC (09:07:54–09:08:41 PDT)**, about 17.6 hours after the baseline: 500 unique IDs per app, 20/20 HTTP 200 responses, no recorded request errors, duplicate IDs or descending-timestamp violations. [Dated evidence](evidence/google-play-multiday/2026-10-05.json) and the daily log retain the recomputable comparison.
+
+At 09:07, the schedule was active but no 5 October evidence file existed. This observation was started during the user's status check; it does **not** establish that the 09:00 scheduled wake executed successfully. The reason for the missing scheduled observation has not been established. The collector's existing-date guard prevents a later wake from collecting again today.
+
+| App | First observed IDs | Repeated IDs | New IDs timestamped after prior newest | Newest timestamp movement |
+|---|---:|---:|---:|---:|
+| Duolingo | 499 | 1 | 0 | 0 hours |
+| Todoist | 2 | 498 | 2 | 21.16 hours |
+| Airbnb | 20 | 480 | 20 | 18.48 hours |
+| Google Maps | 436 | 64 | 436 | 17.70 hours |
+
+Maps, Airbnb and Todoist show new IDs with later timestamps. Maps retains only 64 IDs from yesterday's capped window; a full 24-hour interval may stress the 500-review cap more than this shortened interval. This is observed overlap, not proof of complete coverage. Their newest returned timestamps remain about 24–25 hours behind collection time.
+
+Duolingo's 499 first-observed IDs have older timestamps than the unchanged newest review (10 September). They cannot be counted as 499 newly arriving reviews. This substantial window change with only one overlapping ID, alongside the persistent stale newest timestamp, is an unresolved collection/data inconsistency despite successful HTTP and within-page ordering checks. Keep it visible in the final assessment.
+
+The four-day assessment remains in progress; these two observations do not yet establish long-term stability or a final source recommendation.
+
 ## Schedule and operating bounds
 
 Baseline ran on 4 October. Starting 5 October, the bounded follow-up in the same task is scheduled daily at **09:00 America/Los_Angeles**, through 7 October, moved earlier at the user's request. The first observation was collected at 15:32 on 4 October; the 4 October scheduled wake was set for 16:00 and would reuse that day's saved result. The script refuses collection outside 4–7 October and refuses to overwrite/retry an existing daily result. Missing dates stay missing; no synthetic backfills.
