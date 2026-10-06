@@ -8,7 +8,7 @@ Does the same unofficial `google-play-scraper==1.2.7` collection observe new rev
 
 Keep Duolingo, Todoist and Airbnb. Add **Google Maps (`com.google.android.apps.maps`) as a high-volume Google Play app**, not a new review source: these are reviews of the Maps app, not business/place reviews from Maps. Its [public listing](https://play.google.com/store/apps/details?id=com.google.android.apps.maps&hl=en&gl=us) showed 19.5 million in the header review-count display when checked on 4 October. That aggregate is a selection signal, not a measured daily arrival rate. The baseline also returned 500 reviews spanning approximately 27 hours of displayed timestamps, making it a useful window-cap stress sample.
 
-One observation per local day. Same configuration every day: English/US, `NEWEST`, 100/page, up to five pages per app (500 reviews; 2,000 across all four). This extends the earlier two-page diagnostic to a five-page window; comparisons for this experiment start with the new 4 October baseline, not the differently sized September sample.
+One retained observation per local day. On 6 October the user explicitly requested a replacement; the superseded early run is archived and excluded from daily comparisons. Same configuration every day: English/US, `NEWEST`, 100/page, up to five pages per app (500 reviews; 2,000 across all four). This extends the earlier two-page diagnostic to a five-page window; comparisons for this experiment start with the new 4 October baseline, not the differently sized September sample.
 
 ## Measurements and interpretation
 
@@ -52,30 +52,32 @@ Duolingo's 499 first-observed IDs have older timestamps than the unchanged newes
 
 The four-day assessment remains in progress; these two observations do not yet establish long-term stability or a final source recommendation.
 
-## Third observation: 6 October
+## Third retained observation: 6 October (replacement)
 
-The scheduled heartbeat arrived at **09:00:39 UTC (02:00:39 PDT)**. Collection ran **09:01:22–09:02:21 UTC (02:01:22–02:02:21 PDT)**, about 16.9 hours after the second observation. [Dated evidence](evidence/google-play-multiday/2026-10-06.json) contains 500 unique IDs per app, 20/20 HTTP 200 responses and no recorded request errors, duplicate IDs or descending-timestamp violations. All four windows remained capped with continuation available.
+At the user's explicit request, a fresh collection **replaced** the early 02:01 PDT result for this date. The effective daily evidence is [2026-10-06.json](evidence/google-play-multiday/2026-10-06.json), collected **16:18:11–16:19:00 UTC (09:18:11–09:19:00 PDT)**, about 24.2 hours after the 5 October observation. It contains 500 unique IDs per app, 20/20 HTTP 200 responses, no recorded request errors, duplicate IDs or descending-timestamp violations. All four windows reached the five-page cap with continuation available.
+
+The original 02:01–02:02 PDT output is preserved unchanged in [the superseded archive](evidence/google-play-multiday/superseded/2026-10-06T020122-PDT.json). It is **excluded** from the daily table and cumulative/prior-day comparisons, which use only retained daily observations. The replacement retained the identical app/query configuration. This is one expressly authorized exception to the normal one-attempt-per-date rule: 40 review requests actually occurred on 6 October (20 early plus 20 replacement), while only the replacement supplies today's 2,000 retained records. Neither run is hidden or presented as an automatic retry.
 
 | App | First observed IDs | Repeated IDs | New IDs timestamped after prior newest | Newest timestamp movement |
 |---|---:|---:|---:|---:|
-| Duolingo | 499 | 1 | 167 | 394.35 hours |
-| Todoist | 1 | 499 | 1 | 9.81 hours |
-| Airbnb | 17 | 483 | 17 | 16.35 hours |
-| Google Maps | 242 | 258 | 242 | 16.88 hours |
+| Duolingo | 499 | 1 | 37 | 393.27 hours |
+| Todoist | 5 | 495 | 5 | 23.62 hours |
+| Airbnb | 26 | 474 | 26 | 24.33 hours |
+| Google Maps | 387 | 113 | 387 | 24.14 hours |
 
-Maps, Airbnb and Todoist again expose first-observed IDs with later timestamps and retain prior-ID overlap. Their newest review ages were approximately 24.0, 25.3 and 32.1 hours respectively. Duolingo's newest timestamp advanced to 27 September but still lagged collection by 218 hours; its 499 first-observed IDs are not a measured arrival count. Large changes among older returned IDs remain unresolved.
+Counts were independently recomputed against the retained 4/5 October IDs. Repeated counts use all prior retained dates; immediate previous-day overlap is 1, 495, 473 and 111 respectively. Maps, Airbnb and Todoist again expose first-observed IDs with later timestamps. Their newest review ages were approximately 24.0, 24.6 and 25.6 hours respectively. Duolingo's newest timestamp is 27 September 05:47:29 UTC and still lags collection by 226.5 hours; its 499 first-observed IDs cannot be treated as a measured arrival count. Large changes among older returned IDs remain unresolved.
 
-The collection method succeeded on this third date, but scheduling was seven hours earlier than requested. The stored schedule was corrected and its next nominal run independently checked as **6 October 16:00 UTC / 09:00 PDT**. This experiment ends before daylight-saving time changes, so the correction uses the verified 16:00 UTC equivalent within the existing date window. An attempted named-zone schedule had still produced 02:00 PDT in the saved next-run state; it was not accepted as a verified fix. The scheduler adds a small timing offset (the saved actual next run was 09:04:34 PDT). The daytime wake must reuse today's evidence without another Google Play collection.
+Scheduling history remains part of the evidence: the early heartbeat arrived at 09:00:39 UTC (02:00:39 PDT), seven hours before the requested time. A named-zone attempt still produced 02:00 PDT in the saved next-run state. The stored future schedule was then corrected to the verified 16:00 UTC equivalent for this fixed October window. The corrected daytime heartbeat arrived at 16:05:51 UTC (09:05:51 PDT) and reused the then-existing result without new requests; the later 09:18 replacement was separately requested by the user.
 
-The intended final observation remains 7 October around 09:00 PDT. Its interval after this early observation will be about 31 hours, so final counts must be interpreted using actual intervals rather than assuming equal daily spacing. Complete coverage and the final source recommendation remain pending.
+The intended final observation remains 7 October around 09:00 PDT, about 23.7 hours after this replacement rather than the previously projected 31-hour interval. Actual intervals must still be used in the final comparison. Complete coverage and the final source recommendation remain pending.
 
 ## Schedule and operating bounds
 
-The requested follow-up time is **09:00 America/Los_Angeles**, through 7 October. The initial hour-only configuration was interpreted as UTC; the actual 6 October observation ran at 02:01 PDT. On 6 October the saved future schedule was corrected to the equivalent 16:00 UTC and its nominal local time verified as 09:00 PDT. The scheduler may add a few minutes of timing offset. The first observation was collected at 15:32 on 4 October; the original 4 October scheduled wake was set for 16:00 and would reuse that day's saved result. The script refuses collection outside 4–7 October and refuses to overwrite/retry an existing daily result. Missing dates stay missing; no synthetic backfills.
+The requested follow-up time is **09:00 America/Los_Angeles**, through 7 October. The initial hour-only configuration was interpreted as UTC; the actual 6 October observation ran at 02:01 PDT. On 6 October the saved future schedule was corrected to the equivalent 16:00 UTC and its nominal local time verified as 09:00 PDT. The scheduler may add a few minutes of timing offset. The first observation was collected at 15:32 on 4 October; the original 4 October scheduled wake was set for 16:00 and would reuse that day's saved result. The script refuses collection outside 4–7 October and refuses to overwrite/retry an existing daily result. For the user-authorized 6 October replacement, the old result was first archived and its byte-for-byte integrity verified before releasing the daily file for exactly one fresh run; the guard itself was not changed. Missing dates stay missing; no synthetic backfills.
 
 The local computer must remain on with the desktop app running and the workspace available for the scheduled runs. This is a local scheduled task, not a deployed cloud collector. See [official scheduled-task operating conditions](https://learn.chatgpt.com/docs/automations?surface=app). The OpenAI Docs guidance informed this local-execution constraint. If scheduling or publication fails, preserve evidence and disclose the gap; do not claim four successful observation days.
 
-Requests are spaced by at least two seconds, limited to 20 review requests/day and 25 seconds/request, with verified TLS and no retries, accounts, proxies or challenge handling. Stop collection on transport/parser/access errors and retain the partial run. The package is **unofficial**, and the previously documented Google robots/terms concerns remain; technical success is not permission for unrestricted production collection. No change in production status is implied by this experiment.
+Requests are spaced by at least two seconds, limited to 20 review requests per observation and 25 seconds/request, with verified TLS and no retries, accounts, proxies or challenge handling. Stop collection on transport/parser/access errors and retain the partial run. The package is **unofficial**, and the previously documented Google robots/terms concerns remain; technical success is not permission for unrestricted production collection. No change in production status is implied by this experiment.
 
 ## Reproduction and follow-up
 
