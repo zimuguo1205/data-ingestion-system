@@ -1,6 +1,6 @@
 # Google Play bounded multi-day test
 
-**Status: in progress.** Observation window: **4–7 October 2026**, America/Los_Angeles. The four-day result is not yet available. [Daily log](evidence/google-play-multiday/README.md).
+**Status: completed.** Observation window: **4–7 October 2026**, America/Los_Angeles. Four successful retained daily observations; no failed, partial or missed dates. [Daily log](evidence/google-play-multiday/README.md). The final comparison and conditional recommendation are below; collection ends with 7 October.
 
 ## Question and fixed scope
 
@@ -50,7 +50,7 @@ Maps, Airbnb and Todoist show new IDs with later timestamps. Maps retains only 6
 
 Duolingo's 499 first-observed IDs have older timestamps than the unchanged newest review (10 September). They cannot be counted as 499 newly arriving reviews. This substantial window change with only one overlapping ID, alongside the persistent stale newest timestamp, is an unresolved collection/data inconsistency despite successful HTTP and within-page ordering checks. Keep it visible in the final assessment.
 
-The four-day assessment remains in progress; these two observations do not yet establish long-term stability or a final source recommendation.
+At that stage, these two observations did not establish long-term stability or a final source recommendation.
 
 ## Third retained observation: 6 October (replacement)
 
@@ -69,7 +69,30 @@ Counts were independently recomputed against the retained 4/5 October IDs. Repea
 
 The stored future schedule was corrected to the verified 16:00 UTC equivalent of 09:00 PDT for this fixed October window. The corrected daytime heartbeat arrived at 16:05:51 UTC (09:05:51 PDT) and made no new requests; the later 09:18 replacement was separately requested by the user.
 
-The intended final observation remains 7 October around 09:00 PDT, about 23.7 hours after this replacement rather than the previously projected 31-hour interval. Actual intervals must still be used in the final comparison. Complete coverage and the final source recommendation remain pending.
+The final observation occurred on 7 October at 09:00 PDT, about 23.7 hours after this replacement. Actual intervals are used in the final comparison below; complete coverage remains unproven.
+
+## Final observation and four-day decision
+
+Collected **7 October, 16:00:16–16:01:07 UTC (09:00:16–09:01:07 PDT)** using the unchanged collector and configuration. [Final dated evidence](evidence/google-play-multiday/2026-10-07.json). The heartbeat woke a few minutes early; collection waited until 09:00 local time. All four retained dates completed: **8,000 sampled rows, 4,686 distinct app/review-ID pairs**, and **80/80 HTTP 200 responses in the retained runs**. Those request totals exclude the removed, superseded observation, not all requests ever made. No failed, partial or missed dates were found. Inter-observation start intervals were **17.59, 24.17 and 23.70 hours**; these are not three identical 24-hour periods.
+
+Each app returned five pages of 100 unique IDs per date, with continuation still available. No recorded transport/parser errors, duplicate IDs, invalid scores, missing IDs/scores/timestamps, descending-timestamp violations or continuation-token cycles were detected. Source hashes matched across all retained runs. Independently recomputing cumulative first-seen/repeated counts and previous-day overlaps from the saved tuples matched the JSON comparisons. All eight offline tests passed. These checks establish short-window technical success, not long-term reliability or freshness for every app.
+
+| App | First observed / repeated on 5, 6, 7 Oct | 7 Oct newest timestamp, UTC | 7 Oct movement / age | Interpretation |
+|---|---|---|---|---|
+| Duolingo | 499/1; 499/1; 496/4 | 27 Sep 06:45:12 | +0.96 h / 249.3 h | Large turnover of old IDs; unsuitable for claiming fresh arrivals |
+| Todoist | 2/498; 5/495; 4/496 | 6 Oct 13:02:35 | +22.34 h / 27.0 h | Low volume, substantial overlap, steadily advancing timestamps |
+| Airbnb | 20/480; 26/474; 29/471 | 6 Oct 15:30:29 | +23.80 h / 24.5 h | Moderate volume and consistently advancing timestamps |
+| Google Maps | 436/64; 387/113; 283/217 | 6 Oct 15:58:30 | +23.70 h / 24.0 h | High-volume stress sample with overlap, but a capped window |
+
+**New observations, not measured arrivals.** After the baseline, Todoist, Airbnb and Maps yielded 11, 75 and 1,106 first-observed IDs respectively; all had displayed timestamps later than the previous observation's newest. This supports recurring discovery of later-dated reviews, rather than merely identical immediate repeats. Duolingo yielded 1,494 first-observed IDs, but only 38 were later-dated by that test and its newest review remained over ten days old on 7 October. Its near-total older-ID turnover is an unresolved source/library sampling inconsistency, not a valid estimate of new reviews. HTTP success does not resolve it.
+
+**Freshness and coverage limits.** The other three apps' newest returned reviews remained about 24–29 hours old throughout the experiment. This is observed lag in this method; its cause was not established. Do not promise real-time ingestion. Maps retained previous-day overlap of 64, 111 and 217 IDs, so the bounded no-overlap gap check was not triggered; cumulative repeats on 6 October were 113. However, every window hit the cap with more data available. Overlap is not evidence that all intervening reviews were captured, especially with delayed visibility or review edits. No overlap tuple showed a body/score or timestamp change, but this small window cannot rule out edits elsewhere. No query configuration or cap was increased during the test.
+
+**Analytical tradeoff and recommendation.** Google Play remains the stronger **conditional prototype source**, rather than Steam as the default primary source: these observed apps span education, productivity, travel and navigation, while the collection successfully discovers later-dated reviews over multiple days. For a next-stage prototype, I would propose starting with **Airbnb and Todoist**, retain Maps as a volume/coverage stress case, and exclude Duolingo from freshness-sensitive analysis until its anomaly is understood. This is a recommendation for review, not a newly started collector or expanded source search.
+
+The breadth is app-category breadth, not representative consumer/business feedback: the test is English/US, the Maps sample concerns the app rather than places, and an Airbnb app review is not necessarily a stay review. Maps also had 746 sampled rows under ten characters out of 2,000 repeated-inclusive rows (37.3%); row-level quality checks are needed before sentiment analysis. App versions and developer replies are optional/missing in parts of the samples. The minimized evidence stores hashes, not review bodies, so it cannot itself train a sentiment model. The unofficial third-party method and previously documented access/terms restrictions remain unresolved production considerations. **Approve a limited prototype only if delayed, non-exhaustive sampling is acceptable; do not approve production/completeness claims from this four-day test.**
+
+The bounded test ends here. No collection after 7 October, backfill or additional source exploration is authorized. The scheduled follow-up is to be removed after this report and its evidence are published or a publication blocker is disclosed.
 
 ## Schedule and operating bounds
 
@@ -96,4 +119,4 @@ python3 -m unittest discover -s scripts -p 'test_*.py'
 
 The first command performs today's bounded observation only if permitted by the date/idempotency guards. The latter two commands do not access Google Play. Eight offline tests passed at setup; invoking the collector again after today's result exists must produce no further network calls.
 
-After the final scheduled day, append the actual multi-day comparison, missing/failed dates if any, freshness/window-cap findings and a recommendation here, publish supporting evidence to this repository, and send a concise summary. Do not select Steam automatically or broaden the source search. Do not extend the window without direction.
+The final comparison above completes the bounded observation work. Supporting dated evidence and the daily table are retained for review. Do not select Steam automatically, broaden the source search or extend the window without direction.
