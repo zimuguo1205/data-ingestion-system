@@ -16,5 +16,9 @@ Times and review timestamps below are UTC. First-day records are baseline, not n
 | 2026-10-06 | Todoist | 500 | 5 | 495 | 2026-10-05T14:41:53+00:00 | 23.62 | ok; prior IDs overlap; completeness not proven |
 | 2026-10-06 | Airbnb | 500 | 26 | 474 | 2026-10-05T15:42:34+00:00 | 24.33 | ok; prior IDs overlap; completeness not proven |
 | 2026-10-06 | Google Maps | 500 | 387 | 113 | 2026-10-05T16:16:41+00:00 | 24.14 | ok; prior IDs overlap; completeness not proven |
+| 2026-10-07 | Duolingo | 500 | 496 | 4 | 2026-09-27T06:45:12+00:00 | 0.96 | ok; prior IDs overlap; completeness not proven |
+| 2026-10-07 | Todoist | 500 | 4 | 496 | 2026-10-06T13:02:35+00:00 | 22.34 | ok; prior IDs overlap; completeness not proven |
+| 2026-10-07 | Airbnb | 500 | 29 | 471 | 2026-10-06T15:30:29+00:00 | 23.8 | ok; prior IDs overlap; completeness not proven |
+| 2026-10-07 | Google Maps | 500 | 283 | 217 | 2026-10-06T15:58:30+00:00 | 23.7 | ok; prior IDs overlap; completeness not proven |
 
 A missing date is a missed observation, not zero arrivals. Errors/HTTP traces and minimized record IDs/hashes are retained in each dated JSON.
